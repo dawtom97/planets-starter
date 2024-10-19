@@ -1,0 +1,32 @@
+:root {
+    --black: rgb(0, 0, 0);
+    --white: rgb(255,255,255);
+    --background: rgb(0, 0, 46); 
+    --gray: rgb(136, 138, 143);
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('./fonts/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('./fonts/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family: 'RobotoThin';
+    src: url('./fonts/Roboto-Thin.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'RobotoMedium';
+    background-color: var(--background);
+    background-image: url("./assets/background-stars.svg");
+    background-size: cover;
+}
