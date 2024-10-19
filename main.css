@@ -30,6 +30,7 @@ body {
     background-color: var(--background);
     background-image: url("./assets/background-stars.svg");
     background-size: cover;
+    color: white;
 }
 
 /* Header */
@@ -179,3 +180,31 @@ Parameters section
     font-size: 2.5rem;
 }
 
+/* 
+ Main content left side
+*/
+.content {
+    margin: 12vmin auto;
+    width: 80%;
+    display: flex;
+}
+.content > div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-image {
+    position: relative;;
+}
+.planet {
+    width: 100%;
+    max-width: fit-content;
+}
+
+.planet-geology {
+    position: absolute;
+    transform: translate(70%,70%);
+    width: 150px;
+}
