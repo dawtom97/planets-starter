@@ -183,21 +183,24 @@ Parameters section
 /* 
  Main content left side
 */
-.content {
-    margin: 12vmin auto;
+.planet-section {
+    margin: 8vmin auto;
     width: 80%;
     display: flex;
 }
-.content > div {
-    width: 50%;
+
+.content-left {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
+}
+.content-right {
+    width: 50%;
 }
 
-.content-image {
-    position: relative;;
-}
+
 .planet {
     width: 100%;
     max-width: fit-content;
