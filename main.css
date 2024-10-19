@@ -66,3 +66,32 @@ body {
 .menu-item:hover {
     color: var(--lilac)
 }
+
+/* 
+Parameters section
+*/
+.params {
+    display: flex;
+    gap: 24px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.params-card {
+    padding: 30px 20px;
+    border-radius: 2px;
+    border: 1px solid var(--gray) ;
+    flex-grow: 1;
+    text-transform: uppercase;
+}
+.params-card-title {
+    color: var(--gray);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+
+}
+.params-card-desc {
+    font-size: 2.5rem;
+}
+
