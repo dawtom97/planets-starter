@@ -50,6 +50,14 @@ body {
     letter-spacing: 0.25em;
 }
 
+svg {
+    display: none;
+}
+
+.mobile-btn {
+    display: none;
+}
+
 .header-2 {
     display: flex;
     flex-direction: row;
@@ -76,8 +84,8 @@ body {
     display: flex;
     align-items: center;
     width: 80%;
-    height: 70vh;
-    margin: 0 auto;
+    margin: 8vmin auto;
+
 }
 
 .content-left {
@@ -210,4 +218,106 @@ Parameters section
     position: absolute;
     transform: translate(70%,70%);
     width: 150px;
+}
+
+@media (max-width: 992px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        gap: 35px;
+    }
+    .planet-section {
+        flex-direction: column;
+    }
+
+    .content-left {
+        width: initial;
+    }
+
+    .content-right {
+        width: initial;
+        flex-direction: row;   
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        flex-direction: row;
+    }
+
+    svg {
+        display: block;
+    }
+
+    .mobile-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-bottom: 1px solid var(--gray);
+    }
+
+    .menu-item, .number, .img-switch {
+        display: none;
+    }
+
+    .active-btn, .regular-btn {
+        position: relative;
+        top: 1px;
+        background-color: var(--background);
+        border: none;
+        padding: 35px 0;
+        font-family: 'RobotoBold';
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 0.25em;
+    }
+
+    .active-btn {
+        border-bottom: 2px solid var(--lilac);
+    }
+
+    .planet-section {
+        margin: 0px auto 50px auto;
+
+    }
+
+    .content-left {
+        width: 50%;
+        margin: 50px 0;
+
+    } 
+
+    .planet-desc {
+       margin: 15px auto; 
+    }
+
+    .planet-info {
+        text-align: center;
+    }
+
+    .params {
+        flex-direction: column;
+    }
+
+    .params-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+    }
+
+    .params-card-desc {
+        font-size: 1.5rem;
+    }
+
+    .params-card-title {
+        margin: 0;
+    }
+
+    .planet {
+        width: 250px;
+    }
+
 }
