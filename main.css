@@ -3,6 +3,7 @@
     --white: rgb(255,255,255);
     --background: rgb(0, 0, 46); 
     --gray: rgb(136, 138, 143);
+    --lilac: rgb(96, 50, 208);
 }
 
 @font-face {
@@ -29,14 +30,42 @@ body {
     background-color: var(--background);
     background-image: url("./assets/background-stars.svg");
     background-size: cover;
-    color: var(--white);
 }
 
+.header {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.301);
+}
 
+.site-title {
+    font-family: 'RobotoMedium';
+    font-size: 1.25rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
 
+.header-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
 
+.menu-item {
+    font-family: 'RobotoMedium';
+    font-size: 13px;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    list-style: none;
+}
 
-
+.menu-item:hover {
+    color: var(--lilac)
+}
 
 /* 
 Parameters section
@@ -65,5 +94,4 @@ Parameters section
 .params-card-desc {
     font-size: 2.5rem;
 }
-
 
