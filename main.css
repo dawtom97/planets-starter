@@ -32,11 +32,13 @@ body {
     background-size: cover;
 }
 
+/* Header */
+
 .header {
     display: flex;
     padding: 30px;
     justify-content: space-between;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.301);
+    border-bottom: 0.5px solid var(--gray);
 }
 
 .site-title {
@@ -66,6 +68,88 @@ body {
 .menu-item:hover {
     color: var(--lilac)
 }
+
+/* Planet section */
+
+.planet-section {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 70vh;
+    margin: 0 auto;
+}
+
+.content-left {
+    width: 70%;
+}
+
+.content-right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right content */
+
+h2 {
+    font-family: 'RobotoMedium';
+    font-size: 4rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.planet-desc {
+    font-family: 'RobotoThin';
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--white);
+}
+
+.source-info {
+    font-family: 'RobotoThin';
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--white);
+}
+
+a {
+    font-family: 'RobotoBold';
+    color: var(--white);
+}
+
+.img-switch {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'RobotoBold';
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    color: var(--white);
+}
+
+.active-btn, .regular-btn {
+    display: flex;
+    flex-direction: row;
+    padding-left: 25px;
+    align-items: center;
+    gap: 25px;
+    height: 50px;
+    border: 0.5px solid var(--gray);
+}
+
+.active-btn {
+    background-color: var(--lilac);
+    border: none;
+}
+
+.number {
+    color: var(--gray);
+}
+
+
 
 /* 
 Parameters section
