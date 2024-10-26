@@ -9,7 +9,7 @@ function getParamURL () {
 
 async function getPlanet () {
     const planetName = getParamURL() ?? "Mercury";
-    const response = await fetch("../data.json");
+    const response = await fetch("./data.json");
     if (!response.ok) {
         console.error("Nie udało się pobrać danych");
         return;
