@@ -49,9 +49,11 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.25em;
 }
-
-svg {
+.hamburger {
     display: none;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
 }
 
 .mobile-btn {
@@ -64,6 +66,7 @@ svg {
     align-items: center;
     gap: 25px;
 }
+
 
 .menu-item {
     font-family: 'RobotoMedium';
@@ -273,7 +276,7 @@ Parameters section
         transform: translateX(-100%);
     }
 
-    svg {
+    .hamburger {
         display: block;
     }
 
