@@ -22,7 +22,16 @@ async function getPlanet () {
 async function createPage () {
 
     const planet = await getPlanet();
-    console.log(planet);
+
+    const rotation = document.getElementById("RotationTime");
+    const revolution = document.getElementById("RevolutionTime");
+    const radius = document.getElementById("Radius");
+    const temperature = document.getElementById("AvrgTemp");
+    
+    rotation.textContent = planet.rotation;
+    revolution.textContent = planet.revolution;
+    radius.textContent = planet.radius;
+    temperature.textContent = planet.temperature;
 
 }
 createPage();
