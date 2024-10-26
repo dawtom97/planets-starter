@@ -220,6 +220,28 @@ Parameters section
     width: 150px;
 }
 
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.77);
+    min-height: 100vh;
+    z-index: 9999;
+    width: 300px;
+    max-width: 70%;
+    padding: 30px;
+    transition: transform 500ms;
+
+}
+
+.mobile-header .menu-item {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
 @media (max-width: 992px) {
     .header {
         flex-direction: column;
@@ -244,6 +266,11 @@ Parameters section
 @media (max-width: 992px) {
     .header {
         flex-direction: row;
+    }
+
+    .mobile-header {
+        display: block;
+        transform: translateX(-100%);
     }
 
     svg {
@@ -320,4 +347,8 @@ Parameters section
         width: 250px;
     }
 
+}
+
+.is-visible {
+    transform: translateX(0);
 }
