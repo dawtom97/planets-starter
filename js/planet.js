@@ -8,7 +8,7 @@ function getParamURL () {
 }
 
 async function getPlanet () {
-    const planetName = getParamURL();
+    const planetName = getParamURL() ?? "Mercury";
     const response = await fetch("../data.json");
     if (!response.ok) {
         console.error("Nie udało się pobrać danych");
@@ -19,10 +19,24 @@ async function getPlanet () {
     return planet[0];      
 }
 
+function generateMeta (planet) {
+    document.title = planet.name;
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.href = planet.images.overview;
+    document.head.append(favicon);
+
+    const metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    metaDescription.content = planet.overview.content;
+    document.head.append(metaDescription);
+}
+
 async function createPage () {
 
     const planet = await getPlanet();
     let currentMode = "overview";
+    generateMeta(planet);
 
     const rotation = document.getElementById("RotationTime");
     const revolution = document.getElementById("RevolutionTime");

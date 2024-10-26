@@ -3,16 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon-32x32.png"
-    />
     <link rel="stylesheet" href="./main.css" />
-
-    <title>Frontend Mentor | Planets fact site</title>
   </head>
 
   <body>
@@ -29,33 +20,18 @@
     </header>
 
     <div class="mobile-btn">
-        <div class="active-btn">
-          <h3 class="number">01</h3>
-          <h3 class="btn-title">Overview</h3>
-        </div>
-        <div class="regular-btn">
-          <h3 class="number">02</h3>
-          <h3 class="btn-title">Internal structure</h3>
-        </div>
-        <div class="regular-btn">
-          <h3 class="number">03</h3>
-          <h3 class="btn-title">Surface geology</h3>
-        </div>
+      <script src="./js/modeButtons.js"></script>
     </div>    
 
     <main class="planet-section">
       <div class="content-left">
-        <img id="PlanetImg" class="planet" src="./assets/planet-earth.svg" alt="" />
-        <img id="PlanetGeology" class="planet-geology" src="./assets/geology-earth.png" alt="" />
+        <img id="PlanetImg" class="planet" />
+        <img id="PlanetGeology" class="planet-geology"/>
       </div>
       <div class="content-right">
         <div class="planet-info">
-          <h2 id="PlanetName" class="planet-name">Earth</h2>
+          <h2 id="PlanetName" class="planet-name"></h2>
           <p id="PlanetDesc" class="planet-desc">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus nam
-          velit assumenda, veritatis sapiente et quas quis nesciunt quia nulla
-          fugiat voluptatem provident vel excepturi. Ipsa perferendis ut rem
-          possimus!
           </p>
           <p class="source-info">
           Source:
@@ -67,18 +43,7 @@
           </p>
         </div>
         <div class="img-switch">
-          <div data-mode="overview" class="active-btn">
-            <h3 class="number">01</h3>
-            <h3 class="btn-title">Overview</h3>
-          </div>
-          <div data-mode="structure" class="regular-btn">
-            <h3 class="number">02</h3>
-            <h3 class="btn-title">Internal structure</h3>
-          </div>
-          <div data-mode="geology" class="regular-btn">
-            <h3 class="number">03</h3>
-            <h3 class="btn-title">Surface geology</h3>
-          </div>
+           <script src="./js/modeButtons.js"></script>
         </div>
       </div>
     </main>
