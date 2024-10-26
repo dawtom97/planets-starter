@@ -22,17 +22,44 @@ async function getPlanet () {
 async function createPage () {
 
     const planet = await getPlanet();
+    let currentMode = "overview";
 
     const rotation = document.getElementById("RotationTime");
     const revolution = document.getElementById("RevolutionTime");
     const radius = document.getElementById("Radius");
     const temperature = document.getElementById("AvrgTemp");
-    
-    rotation.textContent = planet.rotation;
-    revolution.textContent = planet.revolution;
-    radius.textContent = planet.radius;
-    temperature.textContent = planet.temperature;
+    const planetImg = document.getElementById("PlanetImg");
+    const planetGeology = document.getElementById("PlanetGeology");
+    const planetName = document.getElementById("PlanetName");
+    const planetDesc = document.getElementById("PlanetDesc");
+    const planetWiki = document.getElementById("PlanetWiki");
 
+    function updatePageView () {
+        planetName.textContent = planet.name;
+        rotation.textContent = planet.rotation;
+        revolution.textContent = planet.revolution;
+        radius.textContent = planet.radius;
+        temperature.textContent = planet.temperature;
+        planetImg.src = planet.images[currentMode];
+        planetDesc.textContent = planet[currentMode].content;
+        planetWiki.href = planet[currentMode].source;
+        planetGeology.src = `./assets/geology-${planet.name.toLowerCase()}.png`;
+        if(currentMode !== "geology") {
+            planetGeology.style.display = "none";
+        } else {
+            planetGeology.style.display = "block";
+            planetImg.src = planet.images.overview;
+        }
+    }
+
+    const modeButtons = document.querySelectorAll("[data-mode]");
+    modeButtons.forEach(function (btn) {
+        btn.onclick = function () {
+            currentMode = btn.getAttribute("data-mode");
+            updatePageView();
+        }
+    })
+    updatePageView();
 }
 createPage();
 

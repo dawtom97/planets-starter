@@ -45,13 +45,13 @@
 
     <main class="planet-section">
       <div class="content-left">
-        <img class="planet" src="./assets/planet-earth.svg" alt="" />
-        <img class="planet-geology" src="./assets/geology-earth.png" alt="" />
+        <img id="PlanetImg" class="planet" src="./assets/planet-earth.svg" alt="" />
+        <img id="PlanetGeology" class="planet-geology" src="./assets/geology-earth.png" alt="" />
       </div>
       <div class="content-right">
         <div class="planet-info">
-          <h2 class="planet-name">Earth</h2>
-          <p class="planet-desc">
+          <h2 id="PlanetName" class="planet-name">Earth</h2>
+          <p id="PlanetDesc" class="planet-desc">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus nam
           velit assumenda, veritatis sapiente et quas quis nesciunt quia nulla
           fugiat voluptatem provident vel excepturi. Ipsa perferendis ut rem
@@ -60,21 +60,22 @@
           <p class="source-info">
           Source:
           <a
+            id="PlanetWiki"
             href="https://pl.wikipedia.org/wiki/Wikipedia:Strona_g%C5%82%C3%B3wna"
             >Wikipedia</a
           >
           </p>
         </div>
         <div class="img-switch">
-          <div class="active-btn">
+          <div data-mode="overview" class="active-btn">
             <h3 class="number">01</h3>
             <h3 class="btn-title">Overview</h3>
           </div>
-          <div class="regular-btn">
+          <div data-mode="structure" class="regular-btn">
             <h3 class="number">02</h3>
             <h3 class="btn-title">Internal structure</h3>
           </div>
-          <div class="regular-btn">
+          <div data-mode="geology" class="regular-btn">
             <h3 class="number">03</h3>
             <h3 class="btn-title">Surface geology</h3>
           </div>
